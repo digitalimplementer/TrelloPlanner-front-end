@@ -25,7 +25,6 @@ export function PomodoroRounds({
 		? !rounds[rounds.length - 1].isCompleted
 		: false;
 
-	console.log('isCanPrevRound', isCanPrevRound);
 	return (
 		<div className={styles.container}>
 			<button
@@ -37,16 +36,18 @@ export function PomodoroRounds({
 			</button>
 			<div className={styles.roundsContainer}>
 				{rounds &&
-					rounds.map((round, index) => (
-						<div
-							key={index}
-							className={cn(styles.round, {
-								[styles.completed]: round.isCompleted,
-								[styles.active]:
-									round.id === activeRound?.id && !round.isCompleted
-							})}
-						></div>
-					))}
+					rounds.map((round, index) => {
+						return (
+							<div
+								key={index}
+								className={cn(styles.round, {
+									[styles.completed]: round.isCompleted,
+									[styles.active]:
+										round.id === activeRound?.id && !round.isCompleted
+								})}
+							/>
+						);
+					})}
 			</div>
 			<button
 				className={styles.button}
