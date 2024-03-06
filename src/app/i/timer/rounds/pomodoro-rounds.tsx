@@ -21,7 +21,11 @@ export function PomodoroRounds({
 	const isCanPrevRound = rounds
 		? rounds.some(round => round.isCompleted)
 		: false;
-	const isCanNextRound = rounds ? !rounds[rounds.length - 1] : false;
+	const isCanNextRound = rounds
+		? !rounds[rounds.length - 1].isCompleted
+		: false;
+
+	console.log('isCanPrevRound', isCanPrevRound);
 	return (
 		<div className={styles.container}>
 			<button

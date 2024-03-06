@@ -47,7 +47,10 @@ export function ListRow({ item, setItems }: IListRow) {
 		>
 			<div>
 				<span className='inline-flex items-center gap-2.5 w-full'>
-					<button aria-describedby='todo-item'>
+					<button
+						aria-describedby='todo-item'
+						className='flex items-end gap-2'
+					>
 						<GripVertical className={styles.grip} />
 
 						<Controller

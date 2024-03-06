@@ -37,7 +37,7 @@ export const Sidebar = () => {
 				</div>
 			</div>
 			<footer className='text-xs opacity-40 font-normal text-center p-layout'>
-				2024 &copy; With love from RED Group
+				2024 &copy; Place for your advertising
 			</footer>
 		</aside>
 	);

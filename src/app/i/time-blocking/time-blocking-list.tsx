@@ -17,7 +17,7 @@ export function TimeBlockingList() {
 	const { handleDragEnd, sensors } = useTimeBlockDnd(items, setItems);
 
 	if (isLoading) return <Loader />;
-	console.log('items', items && typeof items[0].createdAt);
+
 	const { hoursLeft } = calcHoursLeft(items);
 	return (
 		<div>

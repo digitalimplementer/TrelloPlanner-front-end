@@ -4,18 +4,18 @@ import { Heading } from '@/components/ui/heading';
 
 import { NO_INDEX_PAGE } from '@/constants/seo.constants';
 
-import { Pomodoro } from '@/app/i/timer/pomodoro';
+import { Timer } from '@/app/i/timer/timer';
 
 export const metadata: Metadata = {
-	title: 'Pomodoro',
+	title: 'Timer',
 	...NO_INDEX_PAGE
 };
 
-export default function PomodoroPage() {
+export default function TimerPage() {
 	return (
 		<div>
-			<Heading title='Pomodoro timer' />
-			<Pomodoro />
+			<Heading title='Timer' />
+			<Timer />
 		</div>
 	);
 }

@@ -13,7 +13,7 @@ import { useTodaySession } from '@/hooks/useTodaySession';
 import { formatTime } from '@/app/i/timer/format-time';
 import { PomodoroRounds } from '@/app/i/timer/rounds/pomodoro-rounds';
 
-export function Pomodoro() {
+export function Timer() {
 	const timerState = useTimer();
 	const { isLoading, sessionResponse, workInterval } =
 		useTodaySession(timerState);
@@ -35,6 +35,7 @@ export function Pomodoro() {
 		...timerState,
 		rounds
 	});
+
 	return (
 		<div className='relative w-80 text-center'>
 			{!isLoading && (
